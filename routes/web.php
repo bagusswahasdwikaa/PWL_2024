@@ -54,6 +54,14 @@ Route::resource('photos', PhotoController::class)->only([
 Route::resource('photos', PhotoController::class)->except([ 
     'create', 'store', 'update', 'destroy' ]); 
 
+//PRAKTIKUM 6
+//Route::get('/greeting', function () {  	return view('hello', ['name' => 'Sukma Bagus Wahasdwika']); });
+//PRAKTIKUM 7 
+//Route::get('/greeting', function () {  	return view('blog.hello', ['name' => 'Sukma Bagus Wahasdwika']); });
+//PRAKTIKUM 8
+Route::get('/greeting', [WelcomeController::class, 
+'greeting']); 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
